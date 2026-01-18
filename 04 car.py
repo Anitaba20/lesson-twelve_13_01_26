@@ -19,3 +19,4 @@ print(patrik_auto.vek_auta())
 
 daslie_auto = Auto(rok=2019, farba="zelena", znacka="Audi", model="A4")
 print(daslie_auto.znacka)
+
