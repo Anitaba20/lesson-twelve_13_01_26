@@ -123,31 +123,33 @@
 # daslie_auto = Auto(rok=2019, farba="zelena", model="A5")
 # print(daslie_auto.__rok_vyroby)
 
-from datetime import date
+# from datetime import date
+#
+# class Auto:
+#     def __init__(self, rok, farba, model):
+#         self.__rok_vyroby = rok
+#         self.__farba = farba
+#         self.znacka = "Audi"
+#         self.model = model
+#
+#     def vek_auta(self):
+#         current_date = date.today()
+#         current_year = current_date.year
+#         return current_year - self.__rok_vyroby
+#
+#
+#     def nastav_rok_vyroby(self, novy_rok_vyroby):
+#         if novy_rok_vyroby > 1900:
+#             self.__rok_vyroby = novy_rok_vyroby
+#         else:
+#             print("Rok vyroby musi byt v rozsahu od 1900 do dnesneho roku")
+#
+#     def daj_farbu(self):
+#         return self.__farba
+#
+#
+# daslie_auto = Auto(rok=2019, farba="zelena", model="A5")
+# daslie_auto.nastav_rok_vyroby(-1)
+# print(daslie_auto.vek_auta())
 
-class Auto:
-    def __init__(self, rok, farba, model):
-        self.__rok_vyroby = rok
-        self.__farba = farba
-        self.znacka = "Audi"
-        self.model = model
 
-    def vek_auta(self):
-        current_date = date.today()
-        current_year = current_date.year
-        return current_year - self.__rok_vyroby
-
-
-    def nastav_rok_vyroby(self, novy_rok_vyroby):
-        if novy_rok_vyroby > 1900:
-            self.__rok_vyroby = novy_rok_vyroby
-        else:
-            print("Rok vyroby musi byt v rozsahu od 1900 do dnesneho roku")
-
-    def daj_farbu(self):
-        return self.__farba
-
-
-daslie_auto = Auto(rok=2019, farba="zelena", model="A5")
-daslie_auto.nastav_rok_vyroby(2020)
-print(daslie_auto.vek_auta())
