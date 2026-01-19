@@ -1,3 +1,16 @@
+# ZADANIE
+#
+# Create a class City. Class fields should store the following:
+# city name, region name, country name, number of citizens,
+# zip code, area code. Implement method to get full address.
+#
+# ZADANIE
+#
+# Vytvorte triedu City. Atribúty triedy by mali ukladať nasledujúce údaje:
+# názov mesta, názov regiónu, názov krajiny, počet obyvateľov,
+# PSČ, smerové číslo. Implementujte metódu na získanie celej (úplnej) adresy.
+
+
 # class Mesto:
 #
 #     def __init__(self, nazov_mesta, region, krajina, pocet_obyvatelov, psc, predvolba):
