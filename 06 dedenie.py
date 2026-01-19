@@ -11,11 +11,6 @@ class Person:
     def bydlisko(self):
         print(f"{self.name} byva v {self.__address}")
 
-patrik = Person(name="Patrik", age=30, gender="muz", address="Bratislava")
-print(patrik.name)
-print()
-patrik.bydlisko()
-
 class Student(Person):
     def __init__(self, name, age, gender, address, score):
         super().__init__(name, age, gender, address)
@@ -27,5 +22,11 @@ class Student(Person):
         else:
             print(f"{self.name} nie je genius a {self._gender}")
 
+class Teacher(Person):
+    def __init__(self, name, age, gender, address, subject):
+        super().__init__(name, age, gender, address)
+        self.subject = subject
+
 patrik = Student(name="Patrik", age=30, gender="muz", address="Bratislava", score=95)
 milan = Student(name="Milan", age=20, gender="muz", address="Bratislava", score=40)
+
