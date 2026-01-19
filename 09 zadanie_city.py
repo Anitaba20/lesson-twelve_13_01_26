@@ -142,3 +142,65 @@ zilina = PriemyselneMesto(
 print(bratislava.adresa(), "počet úradov", bratislava.pocet_uradov)
 print(trencin.adresa(), "počet pamiatok", trencin.pocet_pamiatok)
 print(zilina.adresa(), "počet fabrík", zilina.pocet_fabrik)
+
+
+class City:
+    def __init__(self, name, region, country, number_of_citizens, zip_code, area_code):
+        self.name = name
+        self.region = region
+        self.country = country
+        self.number_of_citizens = number_of_citizens
+        self.zip_code = zip_code
+        self.area_code = area_code
+
+    def full_address(self):
+        return f"{self.name}, {self.region}, {self.country}"
+
+
+class CulturalCity(City):
+    def __init__(self, name, region, country, number_of_citizens, zip_code, area_code, number_of_museums):
+        super().__init__(name, region, country, number_of_citizens, zip_code, area_code)
+        self.number_of_museums = number_of_museums
+
+
+class TouristCity(City):
+    def __init__(self, name, region, country, number_of_citizens, zip_code, area_code, number_of_visitors):
+        super().__init__(name, region, country, number_of_citizens, zip_code, area_code)
+        self.number_of_visitors = number_of_visitors
+
+
+class IndustrialCity(City):
+    def __init__(self, name, region, country, number_of_citizens, zip_code, area_code, number_of_factories):
+        super().__init__(name, region, country, number_of_citizens, zip_code, area_code)
+        self.number_of_factories = number_of_factories
+
+
+cultural = CulturalCity(
+    "Košice",
+    "Košický",
+    "Slovensko",
+    100000,
+    1000,
+    1000,
+    10
+)
+
+tourist = TouristCity(
+    "Liptovský Mikuláš",
+    "Žilinský",
+    "Slovensko",
+    100000,
+    1000,
+    1000,
+    50000
+)
+
+industrial = IndustrialCity(
+    "Žilina",
+    "Žilinský",
+    "Česko",
+    12231,
+    1232,
+    1222,
+    20
+)
