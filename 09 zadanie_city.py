@@ -88,7 +88,7 @@ class Mesto:
         self.predvolba = predvolba
 
     def adresa(self):
-        return f"{self.nazov_mesta}, {self.region}, {self.krajina}, PSČ {self.psc}, predvoľba {self.predvolba}"
+        return f"{self.nazov_mesta}, {self.region}, {self.krajina}, PSČ {self.psc}, predvoľba {self.predvolba},"
 
 
 class HlavneMesto(Mesto):
@@ -109,8 +109,36 @@ class KulturneMesto(Mesto):
         self.pocet_pamiatok = pocet_pamiatok
 
 
-bratislava = HlavneMesto("Bratislava", "Bratislavský kraj", "Slovensko", 500000, "811 01", "02", 120)
-trencin = KulturneMesto("Trenčín", "Trenčiansky kraj", "Slovensko", 30000, "911 01", "032", 25)
+bratislava = HlavneMesto(
+    "Bratislava",
+    "Bratislavský kraj",
+    "Slovensko",
+    500000,
+    "811 01",
+    "02",
+    120
+)
 
-print(bratislava.adresa(), "- počet úradov:", bratislava.pocet_uradov)
-print(trencin.adresa(), "- počet pamiatok:", trencin.pocet_pamiatok)
+trencin = KulturneMesto(
+    "Trenčín",
+    "Trenčiansky kraj",
+    "Slovensko",
+    30000,
+    "911 01",
+    "032",
+    25
+)
+
+zilina = PriemyselneMesto(
+    "Žilina",
+    "Žilinský kraj",
+    "Slovensko",
+    80000,
+    "010 01",
+    "041",
+    15
+)
+
+print(bratislava.adresa(), "počet úradov", bratislava.pocet_uradov)
+print(trencin.adresa(), "počet pamiatok", trencin.pocet_pamiatok)
+print(zilina.adresa(), "počet fabrík", zilina.pocet_fabrik)
