@@ -204,3 +204,4 @@ industrial = IndustrialCity(
     1222,
     20
 )
+
